@@ -5,14 +5,16 @@ from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired
 from flask_bootstrap import Bootstrap
 import smtplib
+import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Thisisasecret!Really'
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 Bootstrap(app)
 
-MY_EMAIL = "elrondduma@gmail.com"
-MY_PASSWORD = "2xTw5h8imu4uYES"
-TO_EMAIL = "ozturknuri8@gmail.com"
+MY_EMAIL = os.environ['MY_EMAIL']
+MY_PASSWORD = os.environ['MY_PASSWORD']
+TO_EMAIL = os.environ['TO_EMAIL']
+
 
 class ContactForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired()])
@@ -33,7 +35,7 @@ def contact():
     form = ContactForm()
     if form.validate_on_submit():
         data = request.form
-        contents = data["name"]+"\n"+data["email"] + "\n" + data["message"]
+        contents = data["name"] + "\n" + data["email"] + "\n" + data["message"]
         contents = contents.encode("utf-8")
         with smtplib.SMTP("smtp.gmail.com", 587) as connection:
             connection.starttls()
@@ -50,6 +52,3 @@ def contact():
 if __name__ == "__main__":
     # Run the app in debug mode to auto-reload
     app.run(debug=True)
-
-
-
