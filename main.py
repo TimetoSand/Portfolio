@@ -36,7 +36,7 @@ def contact():
     form = ContactForm()
     if form.validate_on_submit():
         data = request.form
-        contents = data["name"] + "\n" + data["email"] + "\n" + data["message"]
+        contents = data["name"] + "\n " + data["email"] + "\n " + data["message"]
         contents = contents.encode("utf-8")
         with smtplib.SMTP("smtp.gmail.com", 587) as connection:
             connection.starttls()
