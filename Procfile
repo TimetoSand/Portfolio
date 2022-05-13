@@ -1,1 +1,1 @@
-web: gunicorn main:app nuri-portfolio.wsgi -b 0.0.0.0:$PORT
+web: flask db upgrade; flask translate compile; gunicorn main:app
