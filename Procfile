@@ -1,1 +1,1 @@
-web: gunicorn main:app
+web: gunicorn main:app nuri-portfolio.wsgi -b 0.0.0.0:$PORT
