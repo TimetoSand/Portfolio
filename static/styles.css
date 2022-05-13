@@ -1,0 +1,91 @@
+body{
+background-color:#F66B0E;
+text-align:center;
+}
+#title{
+padding-bottom:10%;
+}
+h1{
+  font-size: 5.625rem;
+  margin: 50px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  padding-bottom: 12px;
+}
+h3{
+  font-family: 'Montserrat', sans-serif;
+
+}
+.super-navbar {
+  padding: 0 0 3rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.8rem;
+  font-family: "Montserrat-Light";
+  color:#EFEAD8
+}
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 45rem;
+  object-fit: cover;
+}
+.project-title {
+  font-size: 1.8rem;
+  padding: 2rem 0.5rem;
+
+
+}
+
+#skills{
+padding-top:15%;
+padding-bottom:10%;
+}
+
+.card-img-top{
+height:75px;
+width:75px;
+margin:0 auto;
+}
+.alt-title{
+font-size:1.4rem;
+color:#764AF1;
+}
+.no-bullets{
+list-style-type: none;
+}
+.bor{
+padding-left:2%
+}
+.boron{
+padding-right:2%
+}
+.bottom-container{
+  background-color: #205375;
+  padding: 50px 0 20px;
+}
+.copyright{
+  color:#EAF6F6;
+  font-size: 0.75rem;
+  padding: 20px 0;
+}
+.fa{
+font-size:45px;
+padding: 0.5em 1em 0.5em;
+color:white;
+}

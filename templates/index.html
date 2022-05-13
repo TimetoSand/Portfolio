@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat+Alternates:wght@200&family=Montserrat:wght@100;400;900&family=Sacramento&family=Ubuntu&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet"  type="text/css" href="{{url_for('.static', filename='styles.css')}}">
+    <script src="https://kit.fontawesome.com/e9094e8485.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<section id="title">
+    <div class="super-navbar">
+<nav role="navigation">
+        <ul class="nav ml-auto justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#title"></a> <!--About -->
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#work">Work</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('contact') }}">Say Hello</a>
+  </li>
+
+</ul>
+</nav>
+</div>
+
+    <div class="row">
+        <h1>Hi, I'm Nuri</h1>
+        <h3>a web developer</h3>
+
+
+
+    </div>
+</section>
+
+<section id="work">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <h2 class="project-section-header">These are some of my projects</h2>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a class="project-tile" href="https://codepen.io/TimetoSand/full/JjbNpWp" target="_blank">
+          <img class="project-image" src="https://assets.codepen.io/5744159/internal/screenshots/pens/JjbNpWp.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1613581420&width=960" alt="Technical Documentation Project">
+          <p class="project-title">
+            <span class="code">Technical Documentation</span>
+          </p>
+        </a>
+    </div>
+    <div class="carousel-item">
+      <a class="project-tile" href="https://codepen.io/TimetoSand/full/JjrrBNe" target="_blank">
+          <img class="project-image" src="static/images/project.png" alt="Scroll Project">
+          <p class="project-title">
+            <span class="code">Scroll Project</span>
+          </p>
+      </a>
+    </div>
+    <div class="carousel-item">
+            <a class="project-tile" href="https://codepen.io/TimetoSand/full/vYZXXqR" target="_blank">
+              <img class="project-image" src="https://miro.medium.com/max/1608/1*z8i2TbVzNUhBjgugtPTlnQ.png" alt="Choropleth Map">
+
+              <p class="project-title">
+                <span class="code">Choropleth Map</span>
+              </p>
+
+      </a>
+    </div>
+          <div class="carousel-item">
+            <a class="project-tile" href="https://blog-nuri.herokuapp.com/" target="_blank">
+              <img class="project-image" src="https://img.maximummedia.ie/joe_ie/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtam9lLm1heGltdW1tZWRpYS5pZS5zMy5hbWF6b25hd3MuY29tXFxcL3dwLWNvbnRlbnRcXFwvdXBsb2Fkc1xcXC8yMDE3XFxcLzEwXFxcLzA2MDgzMjI1XFxcL2Jsb2cuanBnXCIsXCJ3aWR0aFwiOjc2NyxcImhlaWdodFwiOjQzMSxcImRlZmF1bHRcIjpcImh0dHBzOlxcXC9cXFwvd3d3LmpvZS5pZVxcXC9hc3NldHNcXFwvaW1hZ2VzXFxcL2pvZVxcXC9uby1pbWFnZS5wbmc_aWQ9NDNiY2E5ZGU3ZWIyNjk3MzdhMGZcIixcIm9wdGlvbnNcIjpbXX0iLCJoYXNoIjoiNWYzMDM4NmJkYzZmNmU5YWI1NWM3MjhjN2VmY2RkNGU4Yzc4NjRjOSJ9/blog.jpg" alt="Blog">
+
+              <p class="project-title">
+                <span class="code">Blog</span>
+              </p>
+
+            </a>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+<!--#SKILSS ADD CARD -->
+<section id="skills">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+  <div class="col bor">
+    <div class="card h-100">
+      <img src="https://cdn-icons-png.flaticon.com/512/1336/1336989.png" class="card-img-top" alt="Full-Stack Developer">
+      <div class="card-body">
+        <h5 class="card-title">Full-Stack Developer</h5>
+        <p class="card-text">I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
+        <p class="alt-title">Languages I speak</p>
+        <ul class="no-bullets">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>NodeJS</li>
+            <li>EJS</li>
+            <li>SQL</li>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>MongoDb, Mongoose</li>
+        </ul>
+        <p class="alt-title">Tools I have used:</p>
+        <p>PyCharm, Atom, Replit, Google Colab, Octave</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://cdn-icons-png.flaticon.com/512/1925/1925102.png" class="card-img-top" alt="Data Scientist">
+      <div class="card-body">
+        <h5 class="card-title">Data Scientist</h5>
+        <p class="card-text">The goal is to turn data into information, and information into insight.</p>
+        <p class="alt-title">Data Analysis</p>
+
+            <p>Numpy</p>
+            <p>Pandas</p>
+            <p>Matplotlib</p>
+            <p>Plotly</p>
+            <p>Seaborn</p>
+            <p>Machine Learning</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col boron">
+    <div class="card h-100">
+      <img src="https://cdn-icons-png.flaticon.com/512/922/922699.png" class="card-img-top" alt="Web Designer">
+      <div class="card-body">
+        <h5 class="card-title">Other</h5>
+        <p class="card-text">I value simple content structure, clean design patterns, and thoughtful interactions.</p>
+        <p class="alt-title">Web Design</p>
+
+          <p>Fundamental Design Principles</p>
+          <p>UX / UI</p>
+          <p>Bootstrap</p>
+
+        <p class="alt-title">Also Familiar</p>
+        <p>Linux</p>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+</section>
+      <div class="bottom-container">
+          <a class="footer" href="https://www.linkedin.com/in/ozturk-nuri/"><i class="fa fa-brands fa-linkedin-in"></i></a>
+          <a class="footer" href="https://twitter.com/Quaqqrella"><i class="fa fa-brands fa-twitter"></i></a>
+          <a class="footer" href="https://github.com/TimetoSand"><i class="fa fa-brands fa-github"></i></a>
+          <p class="copyright">© {{year}} Nuri Öztürk</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
