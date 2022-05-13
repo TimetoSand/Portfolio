@@ -38,8 +38,7 @@ def contact():
         data = request.form
         contents = data["name"] + "\n " + data["email"] + "\n " + data["message"]
         contents = contents.encode("utf-8")
-        try:
-            with smtplib.SMTP("smtp.gmail.com", 587) as connection:
+        with smtplib.SMTP("smtp.gmail.com", 587) as connection:
                 connection.starttls()
                 connection.login(MY_EMAIL, MY_PASSWORD)
                 connection.sendmail(
@@ -47,9 +46,7 @@ def contact():
                     to_addrs=TO_EMAIL,
                     msg=f"Subject:New Contact!\n\n{contents}"
                 )
-            return render_template("success.html")
-        except RuntimeError:
-            return render_template("success.html")
+        return render_template("success.html")
 
     return render_template("contact.html", form=form)
 
