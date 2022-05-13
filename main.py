@@ -11,9 +11,9 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 Bootstrap(app)
 
-MY_EMAIL = os.environ['MY_EMAIL']
-MY_PASSWORD = os.environ['MY_PASSWORD']
-TO_EMAIL = os.environ['TO_EMAIL']
+MY_EMAIL = os.environ.get('MY_EMAIL')
+MY_PASSWORD = os.environ.get('MY_PASSWORD')
+TO_EMAIL = os.environ.get('TO_EMAIL')
 
 
 class ContactForm(FlaskForm):
