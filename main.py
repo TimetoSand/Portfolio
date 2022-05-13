@@ -8,7 +8,8 @@ import smtplib
 import os
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.urandom(32)
+app.config['SECRET_KEY'] = SECRET_KEY
 Bootstrap(app)
 
 MY_EMAIL = os.environ.get('MY_EMAIL')
