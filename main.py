@@ -8,8 +8,8 @@ import smtplib
 import os
 
 app = Flask(__name__)
-SECRET_KEY = os.urandom(32)
-app.config['SECRET_KEY'] = SECRET_KEY
+# SECRET_KEY = os.urandom(32)
+app.config['SECRET_KEY'] = os.environ['SECRET_KEY']
 Bootstrap(app)
 
 MY_EMAIL = os.environ.get('MY_EMAIL')
@@ -39,13 +39,13 @@ def contact():
         contents = data["name"] + "\n " + data["email"] + "\n " + data["message"]
         contents = contents.encode("utf-8")
         with smtplib.SMTP("smtp.gmail.com", 587) as connection:
-                connection.starttls()
-                connection.login(MY_EMAIL, MY_PASSWORD)
-                connection.sendmail(
-                    from_addr=MY_EMAIL,
-                    to_addrs=TO_EMAIL,
-                    msg=f"Subject:New Contact!\n\n{contents}"
-                )
+            connection.starttls()
+            connection.login(MY_EMAIL, MY_PASSWORD)
+            connection.sendmail(
+                from_addr=MY_EMAIL,
+                to_addrs=TO_EMAIL,
+                msg=f"Subject:New Contact!\n\n{contents}"
+            )
         return render_template("success.html")
 
     return render_template("contact.html", form=form)
